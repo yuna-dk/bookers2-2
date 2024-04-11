@@ -1,5 +1,17 @@
 class UsersController < ApplicationController
   def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "Welcome! You have signed up successfully."
+      redirect_to user_path(@user.id)
+    else
+      flash.now[:notice] = "An error has occurred.Please try again later"
+      render :new
+    end
   end
 
   def index
@@ -20,8 +32,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update(user_params_update)
-    redirect_to user_path(@user.id)
+    if @user.update(user_params_update)
+      flash[:notice] = "You have updated user successfully."
+      redirect_to user_path(@user.id)
+    else
+      flash.now[:notice] = "An error has occurred.Please try again later"
+      render :edit
+    end
   end
 
   private
