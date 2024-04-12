@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome! You have signed up successfully."
       redirect_to user_path(@user.id)
     else
-      flash.now[:notice] = "An error has occurred.Please try again later"
+      flash.now[:alert] = "An error has occurred.Please try again later"
       render :new
     end
   end
