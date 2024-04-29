@@ -75,6 +75,11 @@
       <% flash.each do |message_type, message| %>
         <div class="flash-message <%= message_type %>"><%= message %></div>
       <% end %>
+      <% if user_signed_in? %>
+        <div class="d-flex justify-content-center m-2">
+          <%= render 'searches/search' %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
 
