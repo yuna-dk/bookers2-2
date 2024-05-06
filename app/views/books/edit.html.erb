@@ -9,6 +9,7 @@
       <%= f.text_field :title %>
       <p>Opinion</p>
       <%= f.text_area :body %><br>
+      <%= render "static.rate", book: book %><br>
       <%= f.submit "Update Book", class: "btn btn-success" %>
       
       <% end %>
