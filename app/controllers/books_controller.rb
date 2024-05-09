@@ -63,6 +63,7 @@ class BooksController < ApplicationController
 
   private
 
+  # タグは空でも投稿できるようにする
   def book_params
     params.require(:book).permit(:title, :body, :star)
   end
