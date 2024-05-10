@@ -23,7 +23,7 @@ class BooksController < ApplicationController
     @books = Book.all
     @user = current_user
     @book = Book.new
-    
+
     if params[:latest]
       @books = Book.latest
     elsif params[:star_count]
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
-    
+
   end
 
   def show
@@ -63,9 +63,8 @@ class BooksController < ApplicationController
 
   private
 
-  # タグは空でも投稿できるようにする
   def book_params
-    params.require(:book).permit(:title, :body, :star)
+    params.require(:book).permit(:title, :body, :star, :tag)
   end
 
   def is_matching_login_user
