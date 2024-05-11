@@ -78,6 +78,7 @@
       <% if user_signed_in? %>
         <div class="d-flex justify-content-center m-2">
           <%= render 'searches/search' %>
+          <%= render 'tagsearches/tagsearch' %>
         </div>
       <% end %>
       <%= yield %>
