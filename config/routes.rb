@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get "search" => "searches#search"
   get 'tagsearches/search', to: 'tagsearches#search'
 
+  devise_scope :user do
+    post "users/guest_sign_in", to: "users/sessions#guest_sign_in"
+  end
+
   resources :books do
     resource :favorite, only: [:create, :destroy]
     resources :book_comments, only: [:create, :destroy]
