@@ -29,6 +29,10 @@ class User < ApplicationRecord
     end
   end
 
+  def guest_user?
+    email == GUEST_USER_EMAIL
+  end
+
   def get_profile_image(width, height)
     unless profile_image.attached?
       file_path = Rails.root.join('app/assets/images/sample-author1.jpg')
