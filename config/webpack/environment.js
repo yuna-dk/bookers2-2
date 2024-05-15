@@ -7,6 +7,7 @@ environment.plugins.prepend('Provide',
     $: 'jquery/src/jquery',
     jQuery: 'jquery/src/jquery',
     jquery: 'jquery/src/jquery',
+    Swiper: 'swiper/swiper-bundle'
   })
 )
 
