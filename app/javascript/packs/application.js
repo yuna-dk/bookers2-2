@@ -27,3 +27,5 @@ window.raty = function(elem,opt) {
 }
 
 window.$ = window.jQuery = require('jquery');
+
+import '../script';
