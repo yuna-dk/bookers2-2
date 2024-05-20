@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'net-smtp'
 gem 'jquery-rails'
+gem 'kaminari','~> 1.2.1'

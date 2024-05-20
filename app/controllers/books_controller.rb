@@ -18,20 +18,18 @@ class BooksController < ApplicationController
       render :new
     end
   end
-
+  
   def index
-    @books = Book.all
     @user = current_user
     @book = Book.new
 
     if params[:latest]
-      @books = Book.latest
+      @books = Book.latest.page(params[:page])
     elsif params[:star_count]
-      @books = Book.star_count
+      @books = Book.star_count.page(params[:page])
     else
-      @books = Book.all
+      @books = Book.page(params[:page])
     end
-
   end
 
   def show
