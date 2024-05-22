@@ -29,3 +29,12 @@ window.raty = function(elem,opt) {
 window.$ = window.jQuery = require('jquery');
 
 import '../script';
+
+$(function() {
+  $('#back a').on('click', function(event) {
+    event.preventDefault(); // デフォルトのリンク動作を防ぐ
+    $('body, html').animate({
+      scrollTop: 0
+    }, 500);
+  });
+});

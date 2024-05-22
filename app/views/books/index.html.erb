@@ -36,6 +36,14 @@
           <% end %>
         </table>
         <%= paginate @books %>
+
+        <!--トップに戻るボタン-->
+        <sapn id="back">
+          <a href="#">
+            <%= image_tag asset_path('arrow.jpg'), data: {"turbolinks"=>false}, class: "arrow" %>
+          </a>
+        </sapn>
+        
     </div>
   </div>
 </div>
