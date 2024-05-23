@@ -57,3 +57,32 @@
   width:      50px;
   height:     50px;
 }
+
+/*検索窓*/
+.search_container {
+  display: flex;
+  align-items: center;
+}
+
+.search_container input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search_container select {
+  margin-left: 5px;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.btn-search:hover {
+  color: #000;
+}

@@ -1,6 +1,6 @@
-<div class="serch_form">
+<div class="search_container">
   <%= form_with url: tagsearches_search_path, method: :get, local: true do |f| %>
-    <%= f.text_field :content %>
-    <%= f.submit "タグ検索", class: "btn-sm btn-primary" %>
+    <input type="text" name="content" size="25" placeholder="タグ検索">
+    <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
   <% end %>
 </div>
