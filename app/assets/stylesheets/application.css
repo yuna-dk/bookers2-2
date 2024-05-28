@@ -52,14 +52,25 @@
 
 
 /*ページネーション自体のデザイン*/
-.pagination {
-  justify-content: center;
-  margin-top: 50px;
+.pagination a {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2px;
+  text-decoration: none;
+  border: 1px solid #ddd;
 }
 
-.pagination>li>a {
-  border: none;     /*枠線をなくす*/
-  color: #696969;   /*文字の色を変える*/
+.pagination a.active,
+.pagination a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination .page.current {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2px;
+  background-color: #ddd;
+  border: 1px solid #bbb;
 }
 
 /* 表示しているページ番号のデザイン */
