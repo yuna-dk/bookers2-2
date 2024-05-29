@@ -190,3 +190,75 @@
 .btn-flat:hover:after {
   transform: translateX(-50%) translateY(0);
 }
+
+/*ヘッダー*/
+.navbar-nav{
+    display: flex;
+    flex-wrap: wrap;/*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin:0 0 50px 0;
+    list-style: none;
+}
+
+.navbar-nav li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+/*==================================================
+　5-3-7 上下に線が伸びて背景になる
+===================================*/
+
+.navbar-nav li a{
+    /*線の基点とするためrelativeを指定*/
+  position: relative;
+    /*はみ出る要素を隠す*/
+  overflow: hidden;
+    /*アニメーションの指定*/
+  transition: all .2s;
+}
+
+/*現在地とhoverの設定*/
+.navbar-nav li.current a,
+.navbar-nav li a:hover{
+    /*背景色をつける*/
+    background: #0481A2;
+  color:#fff;
+}
+
+/*背景がつくのアニメーションの開始を0.5秒遅らせる*/
+.navbar-nav li a:hover{
+  transition-delay: .5s;
+}
+
+/*線の設定*/
+.navbar-nav li a:before,
+.navbar-nav li a:after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    left: 0;
+    /*線の形状*/
+    height: 2px;
+    width:100%;
+    background: #0481A2;
+    /*アニメーションの指定*/
+  transition: all .5s;
+}
+
+/*線の位置と変化*/
+.navbar-nav li a::before {
+    top: 0;
+  transform: translateX(-100%);/*X方向に-100%移動*/
+}
+.navbar-nav li a::after {
+    bottom: 0;
+  transform: translateX(100%);/*X方向に100%移動*/
+}
+
+/*hoverした際の線の変化*/
+.navbar-nav li a:hover::before ,
+.navbar-nav li a:hover::after {
+  transform: translateX(0);/*X方向に0%移動*/
+}
