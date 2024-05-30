@@ -262,3 +262,9 @@
 .navbar-nav li a:hover::after {
   transform: translateX(0);/*X方向に0%移動*/
 }
+
+/*トップページのアンダーライン*/
+.top-page {
+  text-decoration: underline;
+  text-decoration-color: #40E0D0;
+}
