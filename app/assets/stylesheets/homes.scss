@@ -73,12 +73,13 @@
 }
 
 .says {
-  display: inline-block;
+  display: block;
   position: relative; 
   margin: 5px 0 0 105px;
   padding: 17px 13px;
   border-radius: 12px;
   background: #d7ebfe;
+  max-width: 40%;
 }
 
 .says:after {
