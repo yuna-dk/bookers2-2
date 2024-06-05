@@ -125,28 +125,6 @@
   color: #000;
 }
 
-/*ソート機能の背景*/
-.styled-paragraph {
-  position: relative;
-  padding: 15px;
-  border: 3px solid #333;
-  background-color: white;
-  color: #333;
-  font-weight: bold;
-}
-
-.styled-paragraph:before {
-  position: absolute;
-  top: 100%;
-  left: 50px;
-  transform: skew(-25deg);
-  height: 15px;
-  width: 15px;
-  border-right: 3px solid #333;
-  background-color: white;
-  content: "";
-}
-
 /*投稿ボタン*/
 .btn-flat {
   position: relative;
