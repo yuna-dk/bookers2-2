@@ -1,7 +1,7 @@
 <%= render 'list', user: @user, book: @book %>
 
     <div class="col-md-8 offset-md-1">
-      <h2>Books</h2>
+      <h2 class="book-heading">Books</h2>
 
       <p class="styled-paragraph">
         <%= link_to '新しい順', books_path(latest: "true") %>
@@ -45,7 +45,7 @@
             <%= image_tag asset_path('arrow.jpg'), data: {"turbolinks"=>false}, class: "arrow" %>
           </a>
         </sapn>
-        
+
     </div>
   </div>
 </div>

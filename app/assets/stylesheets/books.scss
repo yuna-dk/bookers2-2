@@ -28,3 +28,20 @@
   margin-right: 8px;
 }
 
+// 一覧ページ
+.book-heading {
+  position: relative;
+  padding: 0.3em;
+  background: #EEE;
+}
+
+.book-heading:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #EEE;
+  width: 0;
+  height: 0;
+}
